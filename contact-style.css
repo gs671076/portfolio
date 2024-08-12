@@ -1,0 +1,152 @@
+/* General container styling */
+.contact-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation bar styling */
+.navlist {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000080; 
+    height: 15vh;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin: 0;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.navlist li a.active {
+    color: #5db9ee;
+}
+
+.navlist li a:hover {
+    color: #5db9ee;
+}
+
+.navlist li a::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Contact content styling */
+.contact-content {
+    padding: 2rem;
+    margin-top: 60px; /* Adjust this value if needed to account for navbar height */
+}
+
+.contact-content h1 {
+    font-size: 2.5rem;
+    color: #499dcd;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-details li {
+    font-size: 1rem;
+    color: black;
+    margin: 0.5rem 0;
+}
+
+.contact-details a {
+    color: #5db9ee;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Contact form styling */
+.contact-form {
+    background: #333;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    color: #499dcd;
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #5db9ee;
+    border-radius: 0.3rem;
+    background: #444;
+    color: #ffffff;
+}
+
+.contact-form button {
+    background: #5db9ee;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #499dcd;
+}
